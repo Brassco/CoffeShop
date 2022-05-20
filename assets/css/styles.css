@@ -17,7 +17,7 @@
   border: none;
   text-decoration: none;
   text-transform: capitalize;
-  transition: 0.2s linear;
+  /* transition: 0.2s linear; */
 }
 
 html {
@@ -25,6 +25,10 @@ html {
   overflow-x: hidden;
   scroll-padding-top: 9rem;
   scroll-behavior: smooth;
+}
+
+section {
+  padding: 2rem 7%;
 }
 
 html::-webkit-scrollbar {
@@ -110,7 +114,7 @@ body {
   top: 115%;
   right: 7%;
   background: #fff;
-  width: 50rem;
+  width: 90%;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -188,7 +192,48 @@ body {
   text-align: center;
 }
 
-/* Media Queries */
+.active-form {
+  transform: scaleY(1);
+}
+
+.active {
+  right: 0;
+}
+
+/*********** HOME SECTION ***********/
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url("../images/home-img.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+}
+
+.home-content {
+  max-width: 60rem;
+  padding-top: 12rem;
+}
+
+.home-title {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.home-description {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #eee;
+}
+
+/*********** MEDIA QUERIES ***********/
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -197,9 +242,13 @@ body {
   .header {
     padding: 1.5rem 2rem;
   }
+
+  section {
+    padding: 2rem;
+  }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   #menu-btn {
     display: inline-block;
   }
@@ -220,4 +269,31 @@ body {
     padding: 0.5rem;
     font-size: 2rem;
   }
+
+  .active {
+    right: 0;
+  }
+
+  .home {
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home-content{
+    padding-top: 4rem;
+  }
+
+  .home-title {
+    font-size: 4rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
 }
